@@ -28,9 +28,11 @@ const Dashboard = () => {
     </div>
     
     </nav>
+    <div className="cardContainer">
     {Info.map((postData)=>
-    <Card info={Info}/>
+    <Card info={postData}/>
     )}
+    </div>
 </div>
   )
 }
