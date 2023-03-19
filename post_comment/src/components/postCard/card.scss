@@ -1,0 +1,20 @@
+@mixin flexProperty($direction,$width,$height){
+    width: $width;
+    height: $height;
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    flex-wrap: wrap;
+        }
+
+.postCard{
+    background-color: aqua;    
+    font-size: small;
+    @include flexProperty(column,11rem,13rem);
+}
+
+.commentCard{
+    background-color: aqua;
+    font-size: small;
+    @include flexProperty(column,12rem,13rem );
+}

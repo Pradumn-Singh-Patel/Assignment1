@@ -1,40 +1,40 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import './dashboard.css'
-import Card from './components/card/card'
+import Card from '../../components/postCard/card'
+
 const Dashboard = () => {
-  console.log("hiii")
-    const [Info, setInfo] = useState([])
+    const [postInfo, setpostInfo] = useState([])
+    const [loading,setlLoading]=useState(true)
+   
     const postUrl='https://jsonplaceholder.typicode.com/posts'
-    const commentUrl='https://jsonplaceholder.typicode.com/comments'
+
     useEffect(() => {
-    
       const getPost= async()=>{
         const response=await axios.get(postUrl)
-        setInfo(response.data)
+        setpostInfo(response.data)
+        setlLoading(false)
       }
       getPost()
+      
     }, [])
-    console.log(Info)
-    
+  if(loading){
+    return(
+      <h3>Loading...</h3>
+    )
+  }
+  else{
   return (
-    <div>
-    <nav>
-    <div className='post' >
-        <h3>Post</h3>
-        </div>
-    <div>
-        <h3 className='comment'>Comment</h3>
-    </div>
     
-    </nav>
+    <div>
     <div className="cardContainer">
-    {Info.map((postData)=>
-    <Card info={postData}/>
+    {postInfo.map((postData)=>
+    <Card postInfo={postData}/>
     )}
     </div>
 </div>
   )
+    }
 }
 
 export default Dashboard

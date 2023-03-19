@@ -7,20 +7,17 @@ $bg-color:#81ecec;
     box-sizing: border-box;
   }
 
-@mixin flexProperty{
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
+
+.cardContainer,.commentContainer{
+  background-color: yellow;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+  padding-top: .5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-nav{
-    background-color: #fab1a0;
-    width: 100%;
-    height: 4rem;
-  
-    @include flexProperty;
-    
-    }
-
 
