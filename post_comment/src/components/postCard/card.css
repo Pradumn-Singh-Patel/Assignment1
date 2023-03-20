@@ -1,8 +1,8 @@
 .postCard {
-  background-color: aqua;
+  background-color: #ffeaa7;
   font-size: small;
-  width: 11rem;
-  height: 13rem;
+  width: 16rem;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,10 +10,10 @@
 }
 
 .commentCard {
-  background-color: aqua;
+  background-color: #ffeaa7;
   font-size: small;
-  width: 12rem;
-  height: 13rem;
+  width: 16rem;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;

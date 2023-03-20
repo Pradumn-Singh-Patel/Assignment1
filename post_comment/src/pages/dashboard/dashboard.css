@@ -4,15 +4,19 @@
   box-sizing: border-box;
 }
 
-.cardContainer, .commentContainer {
-  background-color: yellow;
+div h3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.postContainer, .commentContainer {
   width: 100%;
   height: 100%;
   display: flex;
   gap: 1rem;
   flex-direction: row;
   align-items: center;
-  padding-top: 0.5rem;
+  padding: 0 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }/*# sourceMappingURL=dashboard.css.map */

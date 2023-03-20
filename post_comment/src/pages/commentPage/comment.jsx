@@ -26,10 +26,13 @@ const Comment = () => {
     }
     else{
   return (
+    <div>
+      <h3>Comment Data</h3>
     <div className="commentContainer">
     {commentInfo.map((commentData)=>
     <Card commentInfo={commentData}/>
     )}
+    </div>
     </div>
   )
     }

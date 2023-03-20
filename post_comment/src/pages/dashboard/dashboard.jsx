@@ -27,7 +27,8 @@ const Dashboard = () => {
   return (
     
     <div>
-    <div className="cardContainer">
+      <h3>Post Data</h3>
+    <div className="postContainer">
     {postInfo.map((postData)=>
     <Card postInfo={postData}/>
     )}

@@ -8,13 +8,14 @@
         }
 
 .postCard{
-    background-color: aqua;    
+    background-color: #ffeaa7;    
     font-size: small;
-    @include flexProperty(column,11rem,13rem);
+    
+    @include flexProperty(column,16rem,10rem);
 }
 
 .commentCard{
-    background-color: aqua;
+    background-color: #ffeaa7;
     font-size: small;
-    @include flexProperty(column,12rem,13rem );
+    @include flexProperty(column,16rem,10rem );
 }
