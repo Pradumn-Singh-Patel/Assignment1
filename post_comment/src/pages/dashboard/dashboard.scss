@@ -7,6 +7,9 @@ $bg-color:#81ecec;
     box-sizing: border-box;
   }
 
+  .container{
+    height: 100%;
+  }
   div{
     h3{
 text-align: center;
@@ -21,9 +24,14 @@ margin: 1rem;
   gap: 1rem;
   flex-direction: row;
   align-items: center;
-  
-  padding: 0 .5rem;
+  padding: 1rem 2rem 0rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+button{
+  width: 6rem;
+  height: 2rem;
+  margin: 2rem;
+  
+}

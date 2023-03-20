@@ -2,10 +2,13 @@ import React,{useEffect,useState} from 'react'
 import axios from 'axios'
 import Card from '../../components/commentCard/card'
 import '../dashboard/dashboard.css'
+import {Logic} from '../../components/srcollLogic'
 
 const Comment = () => {
     const [commentInfo,setcommentInfo]=useState([])
     const [loading, setLoading] = useState(true)
+    const [visible, setVisible] = useState(20)
+
 
     const commentUrl='https://jsonplaceholder.typicode.com/comments'
     useEffect(() => {
@@ -18,6 +21,7 @@ const Comment = () => {
           
      
     }, [])
+    Logic(visible,setVisible)
 
     if(loading){
       return(
@@ -29,7 +33,7 @@ const Comment = () => {
     <div>
       <h3>Comment Data</h3>
     <div className="commentContainer">
-    {commentInfo.map((commentData)=>
+    {commentInfo.slice(0,visible).map((commentData)=>
     <Card commentInfo={commentData}/>
     )}
     </div>

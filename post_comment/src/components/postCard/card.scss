@@ -7,15 +7,10 @@
     flex-wrap: wrap;
         }
 
-.postCard{
+.postCard,.commentCard{
     background-color: #ffeaa7;    
     font-size: small;
-    
-    @include flexProperty(column,16rem,10rem);
+     
+    @include flexProperty(column,20rem,20rem);
 }
 
-.commentCard{
-    background-color: #ffeaa7;
-    font-size: small;
-    @include flexProperty(column,16rem,10rem );
-}

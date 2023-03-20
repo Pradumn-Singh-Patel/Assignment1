@@ -1,12 +1,13 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import axios from 'axios'
 import './dashboard.css'
 import Card from '../../components/postCard/card'
+import {Logic} from '../../components/srcollLogic'
 
 const Dashboard = () => {
     const [postInfo, setpostInfo] = useState([])
     const [loading,setlLoading]=useState(true)
-   
+    const [visible, setVisible] = useState(20)
     const postUrl='https://jsonplaceholder.typicode.com/posts'
 
     useEffect(() => {
@@ -18,6 +19,8 @@ const Dashboard = () => {
       getPost()
       
     }, [])
+    Logic(visible,setVisible)
+
   if(loading){
     return(
       <h3>Loading...</h3>
@@ -26,10 +29,10 @@ const Dashboard = () => {
   else{
   return (
     
-    <div>
+    <div className='container'>
       <h3>Post Data</h3>
     <div className="postContainer">
-    {postInfo.map((postData)=>
+    {postInfo.slice(0,visible).map((postData)=>
     <Card postInfo={postData}/>
     )}
     </div>
