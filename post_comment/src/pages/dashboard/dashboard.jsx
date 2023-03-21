@@ -37,7 +37,7 @@ const Dashboard = () => {
       <h3>Post Data</h3>
     <div className="postContainer">
     {postInfo.slice(0,visible).map((postData)=>
-    <Card postInfo={postData}/>
+    <Card postInfo={postData} key={postData.id}/>
     )}
     </div>
 </div>

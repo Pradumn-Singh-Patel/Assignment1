@@ -38,7 +38,7 @@ const Comment = () => {
       <h3>Comment Data</h3>
     <div className="commentContainer">
     {commentInfo.slice(0,visible).map((commentData)=>
-    <Card commentInfo={commentData}/>
+    <Card commentInfo={commentData} key={commentData.id}/>
     )}
     </div>
     </div>
