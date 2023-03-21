@@ -13,9 +13,13 @@ const Comment = () => {
     const commentUrl='https://jsonplaceholder.typicode.com/comments'
     useEffect(() => {
         const getComment= async()=>{
+          try{
             const response=await axios.get(commentUrl)
             setcommentInfo(response.data)
             setLoading(false)
+          }catch(error){
+            console.log(error)
+          }
           }
           getComment()
           

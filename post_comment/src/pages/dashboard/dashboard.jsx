@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useContext} from 'react'
+import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import './dashboard.css'
 import Card from '../../components/postCard/card'
@@ -12,9 +12,13 @@ const Dashboard = () => {
 
     useEffect(() => {
       const getPost= async()=>{
+        try{
         const response=await axios.get(postUrl)
         setpostInfo(response.data)
         setlLoading(false)
+        }catch(error){
+           console.log(error)
+        }
       }
       getPost()
       
